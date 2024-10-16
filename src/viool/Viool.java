@@ -27,7 +27,7 @@ public class Viool {
       //  SQL Delete statement to delete a student by their ID
                     System.out.println("Enter Deparment ID to Delete:");
                     int delete = in.nextInt();
-        String sqlDelete = "DELETE FROM tbl_deparment WHERE id = ?";
+        String sqlDelete = "DELETE FROM tbl_deparment WHERE d_id = ?";
         dbconfig.deleteRecord(sqlDelete, delete);
                 break;
                 case 4: 
@@ -35,7 +35,7 @@ public class Viool {
                    int update = in.nextInt();
                     System.out.println("Enter new name of department: ");
                     String Newname = in.next();
-        String sqlUpdate = "UPDATE tbl_deparment SET d_name = ? WHERE id = ?";
+        String sqlUpdate = "UPDATE tbl_deparment SET d_name = ? WHERE d_id = ?";
         dbconfig db = new dbconfig ();
        db.updateRecord(sqlUpdate, Newname, update);
        break;
